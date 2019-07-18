@@ -73,7 +73,7 @@ function drawAxis(myTreeData){    //draw time axis
 }
 
 //get data from languages.json  
-d3.json("tmp/_languages_tree.json", function(error1, json){
+d3.json("tmp/languages.json", function(error1, json){
         if (error1){
             return console.warn(error1);
         }
@@ -1165,7 +1165,7 @@ function loadTreeFromFile(mynamefile){
 		    div3 = d3.select("#tree-container").append("div")
                         .attr("class", "tooltip3")
                         .style("opacity", 0);
-                    helpString = "Search the etymology of a word: enter a word in the search tab, then press Enter or click on one of the words in the drop-down menu. <br><br>In this demo only a small number of words is available (try words 'wiki', 'etymology', 'door', 'butter', 'latte', 'milk', 'coffee', 'web'; see what happens if you try word '_languages_tree') <br> We are currently working on a version that can use the etymology of any words in wiktionary.";
+                    helpString = "Search the etymology of a word: enter a word in the search tab, then press Enter or click on one of the words in the drop-down menu. <br><br>In this demo only a small number of words is available (try words 'wiki', 'etymology', 'door', 'butter', 'latte', 'milk', 'coffee', 'web'; see what happens if you try word 'languages') <br> We are currently working on a version that can use the etymology of any words in wiktionary.";
 		    d3.select("#p-helpPopup").html(helpString);
             }
 	});
@@ -1187,7 +1187,7 @@ $(function() {
         "coffee",
         "caffè",
         "caffè latte",
-        "_languages_tree",
+        "languages",
         "web"
     ];
     var accentMap = {
